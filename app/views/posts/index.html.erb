@@ -1,3 +1,8 @@
 <% @posts.each do |post| %>
-  <div><%= post.title %></div>
+  <div>
+  	<!--
+		REFACTORED BELOW
+  		<a href='<%="/posts/#{post.id}" %>'><%= post.title %></a> -->
+  	<%= link_to post.title, post_path(post) %>
+  </div>
 <% end %>
